@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Deep Work Timer</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="timer">
+        <h1 class = "title">Deep Work Timer</h1>
+        <div class = "upanddown">
+          <h3>Break Length</h3>
+            <button onclick="upBreak()" class = "btn btn-dark">Up</button>
+              <h5 id = "break">05</h5>
+            <button onclick="downBreak()" class = "btn btn-dark">Down</button>  
+          <h3>Session Length</h3>
+            <button onclick="upSession()" class = "btn btn-dark">Up</button>
+              <h5 id = "session">25</h5>
+            <button onclick="downSession()" class = "btn btn-dark">Down</button> 
+        </div>  
+        <div>
+           <h1 id = "now">Session</h1>
+           <h1 id = "time">00:00</h1>
+        </div>
+        <div>
+          <button id = "play" onclick="start()" class = "btn btn-dark">Play</button>
+          <button onclick="reset()" class = "btn btn-dark">Reset</button>
+        </div>  
+      </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
