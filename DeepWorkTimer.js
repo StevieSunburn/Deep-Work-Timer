@@ -1,9 +1,10 @@
+
 let output = document.getElementById("time");
 let minutes = document.getElementById("session");
-
+// Set the default output to default value that changes with the change in (id = session) 
 output.innerHTML = minutes.innerHTML+":00";
 
-
+// Function for increasing the length of the break
 function upBreak(){
   let breakLength = document.getElementById("break")
   let numberB = parseInt(breakLength.innerHTML)
@@ -12,7 +13,7 @@ function upBreak(){
     breakLength.innerHTML = "0" + breakLength.innerHTML;
   }
 }
-
+// Function for decreasing the length of the break
 function downBreak(){
   let breakLength = document.getElementById("break")
   let numberB = parseInt(breakLength.innerHTML)
@@ -25,7 +26,7 @@ function downBreak(){
   }
  }
 
-
+// Function for increasing the length of the session
 function upSession(){
   let sessionLength = document.getElementById("session")
   let numberS = parseInt(sessionLength.innerHTML)
@@ -36,7 +37,7 @@ function upSession(){
   output.innerHTML = minutes.innerHTML+":00";
 }
 
-
+// Function for decreasing the length of the session
 function downSession(){  
   let sessionLength = document.getElementById("session")
   let numberS = parseInt(sessionLength.innerHTML)
@@ -49,10 +50,10 @@ function downSession(){
   output.innerHTML = minutes.innerHTML+":00";
   }
 }
-
+// couple variables to make work easier
 const WHAT = ["Session", "Break"];
 let i = 0;
-
+// function to reset the timer and make play button reapper
 function reset(){
   let timer = document.getElementById("time");
   timer.innerHTML = minutes.innerHTML + ":00"
@@ -60,7 +61,7 @@ function reset(){
   clearInterval(intervalID);
   document.getElementById("play").style.visibility = "visible";
 };
-
+// function to start the session timer
 function start(){
   document.getElementById("play").style.visibility = "hidden";
   let minutesSession = parseInt(document.getElementById("session").innerHTML) - 1;
@@ -83,7 +84,7 @@ function start(){
     }
     }, 1000);
 };
-
+// function to start the break right after the session
 function breakStart(){
   document.getElementById("now").innerHTML = WHAT[1];
   let minutesSession = parseInt(document.getElementById("break").innerHTML) - 1;
